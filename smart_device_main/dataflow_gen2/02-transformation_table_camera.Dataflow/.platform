@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "02-transformation_table_camera"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cbd3e2b1-2736-bea0-403d-a1a6cde092f4"
+  }
+}

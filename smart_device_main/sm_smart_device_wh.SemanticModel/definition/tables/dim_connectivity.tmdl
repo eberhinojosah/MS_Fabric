@@ -1,0 +1,95 @@
+table dim_connectivity
+	lineageTag: 1250cbed-d8a3-4037-bde0-15fdf5a5c712
+	sourceLineageTag: [dbo].[dim_connectivity]
+
+	column connectivity_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 54afb956-bd58-4a24-a39d-71854a7170d8
+		sourceLineageTag: connectivity_id
+		summarizeBy: none
+		sourceColumn: connectivity_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column usb
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2779378f-1a27-4aa2-b91b-d710004df14e
+		sourceLineageTag: usb
+		summarizeBy: none
+		sourceColumn: usb
+
+		annotation SummarizationSetBy = Automatic
+
+	column usb_connector
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: f9749126-9e45-4b81-8de6-4afeffa57f4e
+		sourceLineageTag: usb_connector
+		summarizeBy: none
+		sourceColumn: usb_connector
+
+		annotation SummarizationSetBy = Automatic
+
+	column bluetooth
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 112030a3-8fb8-4a87-87c6-a0a7a8818dbe
+		sourceLineageTag: bluetooth
+		summarizeBy: none
+		sourceColumn: bluetooth
+
+		annotation SummarizationSetBy = Automatic
+
+	column nfc
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b76a519a-9313-4954-bf4f-f7145666319d
+		sourceLineageTag: nfc
+		summarizeBy: none
+		sourceColumn: nfc
+
+		annotation SummarizationSetBy = Automatic
+
+	column sim_card_slot
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 18a5add5-a64c-4e08-abe1-b55adde25f9a
+		sourceLineageTag: sim_card_slot
+		summarizeBy: none
+		sourceColumn: sim_card_slot
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingestion_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7ce127a7-70df-45d7-9861-9a066cb4ffb5
+		sourceLineageTag: ingestion_date
+		summarizeBy: none
+		sourceColumn: ingestion_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column file_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e23128df-d86b-4d80-b116-aea2ee890fcb
+		sourceLineageTag: file_date
+		summarizeBy: none
+		sourceColumn: file_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_connectivity = entity
+		mode: directLake
+		source
+			entityName: dim_connectivity
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

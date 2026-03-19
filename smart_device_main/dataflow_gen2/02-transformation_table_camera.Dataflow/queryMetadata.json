@@ -1,0 +1,29 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "02-transformation_table_camera",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "camera": {
+      "queryId": "f088391c-cc02-4617-a8b0-788de3255f15",
+      "queryName": "camera",
+      "loadEnabled": false
+    },
+    "camera_DataDestination": {
+      "queryId": "5ed7df99-aa64-4ca9-863e-33c0cc7d87ac",
+      "queryName": "camera_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"27318dd7-46dc-4198-b909-699860afc6bd\",\"DatasourceId\":\"31910cd9-a4a8-4326-bd06-63eb17fd5f7d\"}"
+    }
+  ]
+}

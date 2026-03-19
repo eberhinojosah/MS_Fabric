@@ -1,0 +1,29 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "03-transformation_table_connectivity",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "connectivity": {
+      "queryId": "e8320620-29c5-456a-9097-6fd1625d02c5",
+      "queryName": "connectivity",
+      "loadEnabled": false
+    },
+    "connectivity_DataDestination": {
+      "queryId": "318da2fa-0a89-4c12-8e6b-f20a40712467",
+      "queryName": "connectivity_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"27318dd7-46dc-4198-b909-699860afc6bd\",\"DatasourceId\":\"31910cd9-a4a8-4326-bd06-63eb17fd5f7d\"}"
+    }
+  ]
+}

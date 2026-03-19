@@ -1,0 +1,85 @@
+table dim_display
+	lineageTag: 49e2bf97-ebaf-43a1-b85c-8263cb09e941
+	sourceLineageTag: [dbo].[dim_display]
+
+	column display_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c5e16c2c-0dc2-4e4d-a44f-01df68d032a4
+		sourceLineageTag: display_id
+		summarizeBy: none
+		sourceColumn: display_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolution
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3aac071c-92f5-4da3-9320-edd3ce02ebd3
+		sourceLineageTag: resolution
+		summarizeBy: none
+		sourceColumn: resolution
+
+		annotation SummarizationSetBy = Automatic
+
+	column color_depth
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 740f1248-3906-453b-9620-bf4c8a59fb41
+		sourceLineageTag: color_depth
+		summarizeBy: none
+		sourceColumn: color_depth
+
+		annotation SummarizationSetBy = Automatic
+
+	column illumination
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3aedcd2b-073a-4cac-b976-6097ab9dbe8a
+		sourceLineageTag: illumination
+		summarizeBy: none
+		sourceColumn: illumination
+
+		annotation SummarizationSetBy = Automatic
+
+	column refresh_rate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fbf78d0d-0f1a-4fbb-869d-dd945cf0f748
+		sourceLineageTag: refresh_rate
+		summarizeBy: none
+		sourceColumn: refresh_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingestion_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 67e8f25a-09a2-47df-bd83-d7bdb8b456c0
+		sourceLineageTag: ingestion_date
+		summarizeBy: none
+		sourceColumn: ingestion_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column file_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1373796f-6773-490d-a6b4-f8c3974bb81a
+		sourceLineageTag: file_date
+		summarizeBy: none
+		sourceColumn: file_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_display = entity
+		mode: directLake
+		source
+			entityName: dim_display
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,1313 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "dim_brand",
+        "sourceLineageTag": "[dbo].[dim_brand]",
+        "columns": [
+          {
+            "name": "brand_id",
+            "dataType": "int64",
+            "sourceColumn": "brand_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "brand_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "brand",
+            "dataType": "string",
+            "sourceColumn": "brand",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "brand",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "hardware_designer",
+            "dataType": "string",
+            "sourceColumn": "hardware_designer",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "hardware_designer",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "manufacturer",
+            "dataType": "string",
+            "sourceColumn": "manufacturer",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "manufacturer",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_brand",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_camera",
+        "sourceLineageTag": "[dbo].[dim_camera]",
+        "columns": [
+          {
+            "name": "camera_id",
+            "dataType": "int64",
+            "sourceColumn": "camera_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "camera_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "camera_resolution",
+            "dataType": "string",
+            "sourceColumn": "camera_resolution",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "camera_resolution",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "effective_pixel",
+            "dataType": "string",
+            "sourceColumn": "effective_pixel",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "effective_pixel",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "image_format",
+            "dataType": "string",
+            "sourceColumn": "image_format",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "image_format",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "video_recording",
+            "dataType": "string",
+            "sourceColumn": "video_recording",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "video_recording",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "flash",
+            "dataType": "string",
+            "sourceColumn": "flash",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "flash",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_camera",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_category",
+        "sourceLineageTag": "[dbo].[dim_category]",
+        "columns": [
+          {
+            "name": "category_iD",
+            "dataType": "int64",
+            "sourceColumn": "category_iD",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "category_iD",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "device_category",
+            "dataType": "string",
+            "sourceColumn": "device_category",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "device_category",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_category",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_connectivity",
+        "sourceLineageTag": "[dbo].[dim_connectivity]",
+        "columns": [
+          {
+            "name": "connectivity_id",
+            "dataType": "int64",
+            "sourceColumn": "connectivity_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "connectivity_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "usb",
+            "dataType": "string",
+            "sourceColumn": "usb",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "usb",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "usb_connector",
+            "dataType": "string",
+            "sourceColumn": "usb_connector",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "usb_connector",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "bluetooth",
+            "dataType": "string",
+            "sourceColumn": "bluetooth",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "bluetooth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "nfc",
+            "dataType": "string",
+            "sourceColumn": "nfc",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "nfc",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "sim_card_slot",
+            "dataType": "string",
+            "sourceColumn": "sim_card_slot",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "sim_card_slot",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_connectivity",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_display",
+        "sourceLineageTag": "[dbo].[dim_display]",
+        "columns": [
+          {
+            "name": "display_id",
+            "dataType": "int64",
+            "sourceColumn": "display_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "display_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "resolution",
+            "dataType": "string",
+            "sourceColumn": "resolution",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "resolution",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "color_depth",
+            "dataType": "string",
+            "sourceColumn": "color_depth",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "color_depth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "illumination",
+            "dataType": "string",
+            "sourceColumn": "illumination",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "illumination",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "refresh_rate",
+            "dataType": "string",
+            "sourceColumn": "refresh_rate",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "refresh_rate",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_display",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_model",
+        "sourceLineageTag": "[dbo].[dim_model]",
+        "columns": [
+          {
+            "name": "model_id",
+            "dataType": "int64",
+            "sourceColumn": "model_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "model_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "category_id",
+            "dataType": "int64",
+            "sourceColumn": "category_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "category_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "model",
+            "dataType": "string",
+            "sourceColumn": "model",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "model",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "code_name",
+            "dataType": "string",
+            "sourceColumn": "code_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "code_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_model",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_operating_system",
+        "sourceLineageTag": "[dbo].[dim_operating_system]",
+        "columns": [
+          {
+            "name": "os_id",
+            "dataType": "int64",
+            "sourceColumn": "os_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "os_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "platform",
+            "dataType": "string",
+            "sourceColumn": "platform",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "platform",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_operating_system",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_physical_specs",
+        "sourceLineageTag": "[dbo].[dim_physical_specs]",
+        "columns": [
+          {
+            "name": "physical_spec_id",
+            "dataType": "int64",
+            "sourceColumn": "physical_spec_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "physical_spec_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "width",
+            "dataType": "string",
+            "sourceColumn": "width",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "width",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "dataType": "string",
+            "sourceColumn": "height",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "height",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "depth",
+            "dataType": "string",
+            "sourceColumn": "depth",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "depth",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "mass",
+            "dataType": "string",
+            "sourceColumn": "mass",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "mass",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ram_capacity",
+            "dataType": "string",
+            "sourceColumn": "ram_capacity",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "ram_capacity",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "controller",
+            "dataType": "string",
+            "sourceColumn": "controller",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "controller",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NominaBatteryCapacity",
+            "dataType": "string",
+            "sourceColumn": "NominaBatteryCapacity",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "NominaBatteryCapacity",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EstimateBatteryLife",
+            "dataType": "string",
+            "sourceColumn": "EstimateBatteryLife",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EstimateBatteryLife",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_physical_specs",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "dim_time",
+        "sourceLineageTag": "[dbo].[dim_time]",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "year",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "month",
+            "dataType": "int64",
+            "sourceColumn": "month",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "month",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "day",
+            "dataType": "int64",
+            "sourceColumn": "day",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "day",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "month_name",
+            "dataType": "string",
+            "sourceColumn": "month_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "month_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "day_name",
+            "dataType": "string",
+            "sourceColumn": "day_name",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "day_name",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "quarter",
+            "dataType": "string",
+            "sourceColumn": "quarter",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "quarter",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "dim_time",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
+        "name": "fact_device",
+        "sourceLineageTag": "[dbo].[fact_device]",
+        "columns": [
+          {
+            "name": "device_id",
+            "dataType": "int64",
+            "sourceColumn": "device_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "device_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "brand_id",
+            "dataType": "int64",
+            "sourceColumn": "brand_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "brand_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "model_id",
+            "dataType": "int64",
+            "sourceColumn": "model_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "model_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "display_id",
+            "dataType": "int64",
+            "sourceColumn": "display_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "display_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "camera_id",
+            "dataType": "int64",
+            "sourceColumn": "camera_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "camera_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "connectivity_id",
+            "dataType": "int64",
+            "sourceColumn": "connectivity_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "connectivity_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "os_id",
+            "dataType": "int64",
+            "sourceColumn": "os_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "os_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "physical_spec_id",
+            "dataType": "int64",
+            "sourceColumn": "physical_spec_id",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "physical_spec_id",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "released_announced",
+            "dataType": "dateTime",
+            "sourceColumn": "released_announced",
+            "formatString": "General Date",
+            "sourceProviderType": "date",
+            "sourceLineageTag": "released_announced",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ingestion_date",
+            "dataType": "dateTime",
+            "sourceColumn": "ingestion_date",
+            "formatString": "General Date",
+            "sourceProviderType": "datetime2",
+            "sourceLineageTag": "ingestion_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "file_date",
+            "dataType": "string",
+            "sourceColumn": "file_date",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "file_date",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "fact_device",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

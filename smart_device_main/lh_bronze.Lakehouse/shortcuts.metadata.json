@@ -1,0 +1,14 @@
+[
+  {
+    "name": "smart-device",
+    "path": "/Files",
+    "target": {
+      "type": "AdlsGen2",
+      "adlsGen2": {
+        "connectionId": "c58e6923-cf57-4b5d-a301-060f5ac5c92c",
+        "location": "https://samfcsmartdevice.dfs.core.windows.net",
+        "subpath": "/smart-device"
+      }
+    }
+  }
+]

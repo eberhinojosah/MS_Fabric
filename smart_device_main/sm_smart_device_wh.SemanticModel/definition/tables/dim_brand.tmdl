@@ -1,0 +1,75 @@
+table dim_brand
+	lineageTag: 67b5beb2-e68b-4e04-a284-e358b02455bc
+	sourceLineageTag: [dbo].[dim_brand]
+
+	column brand_id
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 40acdf98-d71e-4c1c-aa05-4f48671f980a
+		sourceLineageTag: brand_id
+		summarizeBy: none
+		sourceColumn: brand_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: decda81b-1bbb-4a4a-b1e9-385b552e6a43
+		sourceLineageTag: brand
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column hardware_designer
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9990208f-fd9e-45cb-907c-07afe0b0ad66
+		sourceLineageTag: hardware_designer
+		summarizeBy: none
+		sourceColumn: hardware_designer
+
+		annotation SummarizationSetBy = Automatic
+
+	column manufacturer
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 956fced8-b66d-434b-90c5-58fc24755eae
+		sourceLineageTag: manufacturer
+		summarizeBy: none
+		sourceColumn: manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingestion_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f105e05e-1af0-4a56-be7b-a1dae485c139
+		sourceLineageTag: ingestion_date
+		summarizeBy: none
+		sourceColumn: ingestion_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column file_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 29f21b86-49d0-499e-b71f-07f134720a8c
+		sourceLineageTag: file_date
+		summarizeBy: none
+		sourceColumn: file_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_brand = entity
+		mode: directLake
+		source
+			entityName: dim_brand
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

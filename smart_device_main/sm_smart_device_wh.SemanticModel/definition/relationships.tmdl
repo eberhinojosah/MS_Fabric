@@ -1,0 +1,36 @@
+relationship 2e185396-8acb-5e78-2cb3-c360d305b5d9
+	fromColumn: dim_model.category_id
+	toColumn: dim_category.category_iD
+
+relationship 6da5212c-78dc-027a-24a8-f3fe94d4e4b7
+	fromColumn: fact_device.model_id
+	toColumn: dim_model.model_id
+
+relationship b16f4efa-340f-075c-39d5-411cfd41e52c
+	fromColumn: fact_device.brand_id
+	toColumn: dim_brand.brand_id
+
+relationship 40763c0f-29e4-79aa-15b3-c10a8a485cf3
+	fromColumn: fact_device.camera_id
+	toColumn: dim_camera.camera_id
+
+relationship 4237f04a-3130-9c91-c3ba-563e62a21510
+	fromColumn: fact_device.physical_spec_id
+	toColumn: dim_physical_specs.physical_spec_id
+
+relationship b2c44f3e-c8f0-5bae-3583-2426cd5eda48
+	fromColumn: fact_device.connectivity_id
+	toColumn: dim_connectivity.connectivity_id
+
+relationship 9ca8024f-09b9-5c1b-ecb4-fc18b639d9a3
+	fromColumn: fact_device.display_id
+	toColumn: dim_display.display_id
+
+relationship a936e211-25a0-e799-f6f4-6ae74cb675b8
+	fromColumn: fact_device.os_id
+	toColumn: dim_operating_system.os_id
+
+relationship 613ea853-ac4b-baf8-6f3e-8b281d2eee78
+	fromColumn: fact_device.released_announced
+	toColumn: dim_time.date
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pl_ingest_smart_device"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "510b90ab-8646-a7e4-43ff-96a60d00e375"
+  }
+}

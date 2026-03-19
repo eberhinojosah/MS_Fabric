@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Warehouse",
+    "displayName": "wh_smart_device"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9fb9a585-71fb-be0d-40da-6ab3f00b0a24"
+  }
+}
