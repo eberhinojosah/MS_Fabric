@@ -1,0 +1,13 @@
+// KQL script
+// Use management commands in this script to configure your database items, such as tables, functions, materialized views, and more.
+
+
+.create-merge table bicycle (BikepointID:string, Street:string, Neighbourhood:string, Latitude:real, Longitude:real, No_Bikes:long, No_Empty_Docks:long, current_time:datetime) with (folder = "Bronze") 
+.create-merge table TransformedData (BikepointID:int, Street:string, Neighbourhood:string, Latitude:real, Longitude:real, No_Bikes:long, No_Empty_Docks:long, current_time:datetime, BikesToBeFilled:long, Action:string) with (folder = "Silver") 
+.create-or-alter function with (skipvalidation = "true") TransformedBicycleData() {
+    bicycle
+    | parse BikepointID with * "BikePoints_" BikepointID:int
+    | extend BikesToBeFilled = No_Empty_Docks - No_Bikes
+    | extend Action = iff(BikesToBeFilled > 0, tostring(BikesToBeFilled), "NA")
+}
+.alter table TransformedData policy update "[{\"IsEnabled\":true,\"Source\":\"bicycle\",\"Query\":\"TransformedBicycleData()\",\"IsTransactional\":false,\"PropagateIngestionProperties\":false,\"ManagedIdentity\":null}]"

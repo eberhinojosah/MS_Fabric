@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "es_bicycle_rentals"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c1b03efd-9b18-85d7-4ddc-d18a887feb2b"
+  }
+}
