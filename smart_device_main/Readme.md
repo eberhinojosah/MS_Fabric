@@ -1,0 +1,1 @@
+This is an auto-created file for smart_device_main
