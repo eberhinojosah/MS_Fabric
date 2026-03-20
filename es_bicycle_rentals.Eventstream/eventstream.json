@@ -50,6 +50,12 @@
                 "items": null
               },
               {
+                "name": "Neighbourhood",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
                 "name": "Latitude",
                 "type": "Float",
                 "fields": null,
@@ -70,12 +76,6 @@
               {
                 "name": "No_Empty_Docks",
                 "type": "BigInt",
-                "fields": null,
-                "items": null
-              },
-              {
-                "name": "Neighbourhood",
-                "type": "Nvarchar(max)",
                 "fields": null,
                 "items": null
               },
@@ -145,6 +145,18 @@
               "column": {
                 "expressionType": "ColumnReference",
                 "node": null,
+                "columnName": "Neighbourhood",
+                "columnPathSegments": []
+              }
+            },
+            "alias": "Neighbourhood"
+          },
+          {
+            "type": "Rename",
+            "properties": {
+              "column": {
+                "expressionType": "ColumnReference",
+                "node": null,
                 "columnName": "Latitude",
                 "columnPathSegments": []
               }
@@ -176,8 +188,9 @@
             "alias": "No_Bikes"
           },
           {
-            "type": "Rename",
+            "type": "Cast",
             "properties": {
+              "targetDataType": "BigInt",
               "column": {
                 "expressionType": "ColumnReference",
                 "node": null,
@@ -186,18 +199,6 @@
               }
             },
             "alias": "No_Empty_Docks"
-          },
-          {
-            "type": "Rename",
-            "properties": {
-              "column": {
-                "expressionType": "ColumnReference",
-                "node": null,
-                "columnName": "Neighbourhood",
-                "columnPathSegments": []
-              }
-            },
-            "alias": "Neighbourhood"
           },
           {
             "type": "FunctionCall",
